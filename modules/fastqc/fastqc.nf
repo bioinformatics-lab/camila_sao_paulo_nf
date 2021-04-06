@@ -24,6 +24,12 @@ process FASTQC {
     fastqc *fastq*
     """
 
+    stub:
+    """
+    touch *.html
+
+    touch *.zip
+    """
 }
 
 

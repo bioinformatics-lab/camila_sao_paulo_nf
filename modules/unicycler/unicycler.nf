@@ -36,7 +36,7 @@ process UNICYCLER {
     stub:
     """
     mkdir ${genomeName}
-    touch ${genomeName}.contigs.fasta
+    touch ${genomeName}/${genomeName}.contigs.fasta
 
     """
 

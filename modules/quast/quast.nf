@@ -28,6 +28,12 @@ process QUAST {
 
     """
 
+    stub:
+    """
+    mkdir quast_results
+    touch quast_results
+
+    """
 }
 
 workflow test {

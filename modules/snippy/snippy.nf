@@ -25,4 +25,10 @@ process SNIPPY {
 
     """
 
+    stub:
+    """
+    mkdir ${genomeName}
+    touch ${genomeName}
+
+    """
 }

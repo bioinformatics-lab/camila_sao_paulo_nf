@@ -25,6 +25,12 @@ process SPADES {
     spades.py -k 21,33,55,77 --careful --only-assembler --pe1-1 ${genomeReads[0]} --pe1-2 ${genomeReads[1]} -o ${genomeName} -t ${task.cpus}
     cp ${genomeName}/scaffolds.fasta ${genomeName}_scaffolds.fasta 
     """
+
+    stub:
+    """
+    touch ${genomeName}_scaffolds.fasta
+
+    """
 }
 
 

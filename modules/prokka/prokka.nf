@@ -24,6 +24,12 @@ process PROKKA {
     prokka --outdir ${genomeName} --prefix $genomeName --cpus ${task.cpus} --proteins {reference} ${bestContig} 
     """
 
+    stub:
+    """
+    mkdir ${genomeName}
+    touch ${genomeName}
+    
+    """
 }
 
 
