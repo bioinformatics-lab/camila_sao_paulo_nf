@@ -7,7 +7,6 @@ params.saveMode = 'copy'
 
 process SPADES {
     tag "${genomeName}"
-    publishDir params.resultsDir, mode: params.saveMod
 
     input:
     tuple val(genomeName), path(genomeReads)
