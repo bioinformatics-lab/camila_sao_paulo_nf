@@ -1,5 +1,5 @@
 outdir: "TEST"
 
-reads: "data/mock_data/mock_read.R1.fastq.gz data/mock_data/mock_read.R2.fastq.gz"
+reads: "data/mock_data/001_R{1,2}.fastq.gz"
 
-gbk-file: "data/mock_data/mock_ref_seq.gbk"
+gbk-file: "data/mock_data/ref01.gbk"

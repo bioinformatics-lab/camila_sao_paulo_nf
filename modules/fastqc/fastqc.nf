@@ -26,9 +26,9 @@ process FASTQC {
 
     stub:
     """
-    touch *.html
+    touch ${genomeName}.html
 
-    touch *.zip
+    touch ${genomeName}.zip
     """
 }
 
