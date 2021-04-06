@@ -1,4 +1,4 @@
 set -uex
-touch read_R1.fastq.gz
-touch read_R2.fastq.gz
-touch ref_seq.gbk
+touch mock_read.R1.fastq.gz
+touch mock_read.R2.fastq.gz
+touch mock_ref_seq.gbk
