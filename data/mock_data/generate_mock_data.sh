@@ -10,3 +10,4 @@ touch ref01.fasta
 touch ref02.gbk
 touch ref02.fasta
 touch ref03.gbk
+touch ref03.fasta
