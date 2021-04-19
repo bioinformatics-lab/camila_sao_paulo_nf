@@ -20,18 +20,10 @@ This is the complete workflow of this pipeline, the tool integration aims on a g
 
 	Please refer to [Nextflow page on github](https://github.com/nextflow-io/nextflow/) for more info.
 
-2. Clone this repo
+2. Run it!
 
 ```
-	git clone https://github.com/bioinformatics-lab/camila_sao_paulo_nf.git
-
-```
-
-3. Run it!
-
-
-```
-	nextflow run main.nf --reads $READ --gbkFile $GBK --outdir $OUTDIR
+	nextflow run https://github.com/bioinformatics-lab/camila_sao_paulo_nf.git --reads $READ --gbkFile $GBK --outdir $OUTDIR
 
 ```
 
@@ -47,9 +39,13 @@ You can use diferent profiles for this pipeline, based on the computation enviro
 
 * aws 
 
-* azure
+* gls
 
-* gcp
+* azureBatch
+
+* awsBatch
+
+`Note: Update conf/profile with your own credentials`
 
 ## Tower execution
 This Pipeline can be launched on `Tower`, please refer to [Tower launch documentation](https://help.tower.nf/docs/launch/overview/) for step-by-step execution tutorial.
@@ -65,47 +61,3 @@ nextflow run main.nf \
 		 -params-file stub_params.yaml \
 		 -stub-run
 ``` 
-
-## Project structure
-
-├── bin
-│   └── filter_contigs.pl
-├── data
-│   └── mock_data
-│       └── generate_mock_data.sh
-├── LICENSE
-├── main.nf
-├── modules
-│   ├── fastqc
-│   │   └── fastqc.nf
-│   ├── multiqc
-│   │   └── multiqc.nf
-│   ├── prokka
-│   │   └── prokka.nf
-│   ├── quast
-│   │   └── quast.nf
-│   ├── snippy
-│   │   └── snippy.nf
-│   ├── spades
-│   │   └── spades.nf
-│   ├── trimmomatic
-│   │   └── trimmomatic.nf
-│   ├── unicycler
-│   │   └── unicycler.nf
-│   └── utils
-│       └── filter_contigs
-│           └── filter_contigs.nf
-├── nextflow.config
-├── params
-│   ├── local.yml
-│   ├── stub_params.yaml
-│   └── test_params.yml
-├── README.md
-├── resources
-│   ├── dag.dot
-│   ├── dag.png
-│   └── Tortoli_1-s2.0-S1567134819302011-mmc2.csv
-├── Taskfile.yml
-└── workflows
-    └── download_references
-        └── download_fasta_references.nf
