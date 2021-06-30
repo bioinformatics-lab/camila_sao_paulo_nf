@@ -7,7 +7,7 @@ params
 */
 
 params.results_dir = 'results/fastaFiles'
-params.api_key = System.getenv("NCBI_API_KEY")
+params.api_key = "${NCBI_API_KEY}"
 
 /*
 ================================
@@ -224,4 +224,3 @@ workflow DOWNLOAD_REFERENCES {
     NCBI_ACC_DOWNLOAD(sra_ch.flatten())
 
 }
-
